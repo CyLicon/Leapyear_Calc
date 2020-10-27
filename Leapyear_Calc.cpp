@@ -6,6 +6,7 @@
 int main()
 {
     int year;
+    int cnt;
     std::cout << "Let's check if your year is a leap year\n" << "Enter your year: ";
     std::cin >> year;
 
