@@ -2,26 +2,67 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
 
-int main()
-{
-    int year;
-    int cnt;
-    std::cout << "Let's check if your year is a leap year\n" << "Enter your year: ";
-    std::cin >> year;
+int main() {
 
-    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    int cnt = 1;
 
-        std::cout << "The year " << year << " is a leap year.\n";
+    while (cnt == 1) {
+
+        int year;
+
+        std::cout << "Let's check if your year is a leap year\n" << "Enter your year: ";
+        std::cin >> year;
+
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+
+            std::cout << "The year " << year << " is a leap year.\n";
+
+        }
+        else {
+
+            std::cout << "The year " << year << " is not a leap year.\n";
+
+        }
+
+        std::cout << "Do you wish to continue?\n";
+        std::cout << "Press 0 to exit or 1 to continue: ";
+        std::cin >> cnt;
+
+        if (cnt == 0) {
+
+            std::cout << "Thanks for using Leapyear Calc!\n";
+            void exit();
+            system("pause");
+
+        }
 
     }
-    else {
 
-        std::cout << "The year " << year << " is not a leap year.\n";
+    while (cnt > 1 || cnt < 0) {
+
+        std::cout << "Error: Unsupprted character/numerical. Please type correct numericals and choose from the two options given above.\n";
+        std::cout << "Do you wish to continue?\n";
+        std::cout << "Press 0 to exit or 1 to continue: ";
+        std::cin >> cnt;
+
+        if (cnt == 1) {
+
+            return main();
+
+        }
+
+        else {
+
+            void exit();
+
+        }
+
+        system("pause");
 
     }
 
-    std::cout << "Thanks for using Leapyear Calc!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
